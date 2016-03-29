@@ -1,0 +1,29 @@
+﻿<Window x:Class="WinNetMan.AddNetConf"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WinNetMan"
+        mc:Ignorable="d"
+        Title="Add network configuration" Height="350"  Width="300">
+    <StackPanel>
+        <CheckBox Margin="7,7" IsChecked="{Binding Path=UseDHCP, Mode=TwoWay}">Use DHCP</CheckBox>
+        
+        <Label>IP Address : </Label>
+        <TextBox Text="{Binding Path=IPAddress, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="7,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273"/>
+
+        <Label>Netmask :</Label>
+        <TextBox Text="{Binding Path=Netmask, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="7,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273"/>
+        
+        <Label>Gateway :</Label>
+        <TextBox Text="{Binding Path=Gateway, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="7,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273"/>
+
+        <Label>Primary DNS:</Label>
+        <TextBox Text="{Binding Path=DNS1, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="7,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273"/>
+
+        <Label>Secondary DNS :</Label>
+        <TextBox Text="{Binding Path=DNS2, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="7,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273"/>
+
+        <Button x:Name="validateButton" Margin="10,10,10,10" Click="validateButton_Click">Validate</Button>
+    </StackPanel>
+</Window>
